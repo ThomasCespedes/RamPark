@@ -1,15 +1,29 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace RamPark
 {
     public partial class Login : System.Web.UI.Page
     {
-        //Instansiate the SQL server here
+        /*
+         
+  <connectionStrings>
+    <add name="SQLConnection" providerName="System.Data.SqlClient"
+      connectionString="Data Source=ram-park-sql-server-database.windows.net;Integrated Security=False;User ID=Garavuso;Password=Vinny123" />
+  </connectionStrings>
+             
+             */
+
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,7 +31,17 @@ namespace RamPark
 
         protected void loginBtn_Click(object sender, EventArgs e)
         {
-
+            SqlConnection myConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["SQLConnection"].ConnectionString);
+            string query = "SELECT Email, Password FROM USERS where UPPER(email) = @uEmail AND password=@uPassword";
+            var command = new SqlCommand(query, myConnection);
+            command.Parameters.AddWithValue("@uEmail", emailTb.Text.ToUpper());
+            command.Parameters.AddWithValue("@uPassword", passwordTb.Text);
+            myConnection.Open();
+            var reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                Response.Redirect("Home.aspx");
+            }
         }
 
         protected void registerBtn_Click(object sender, EventArgs e)

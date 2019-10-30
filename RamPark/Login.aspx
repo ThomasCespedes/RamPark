@@ -12,10 +12,10 @@
     <form id="form1" runat="server">
         <div class="login-style">
             <img src="Images/logo-login.png" class="image-style" />
-            <asp:Label ID="usernameLbl" CssClass="label-style" runat="server" Text="Username"></asp:Label>
-            <input id="Text1" class="input-style" type="text" />
-            <asp:Label ID="Label2" CssClass="label-style" runat="server" Text="Password"></asp:Label>
-            <input id="Text2" class="input-style" type="text" />
+            <asp:Label ID="emailLbl" CssClass="label-style" runat="server" Text="Email"></asp:Label>
+            <asp:TextBox ID="emailTb" CssClass="input-style" runat="server"></asp:TextBox>
+            <asp:Label ID="passwordLbl" CssClass="label-style" runat="server" Text="Password"></asp:Label>
+            <asp:TextBox ID="passwordTb" CssClass="input-style" runat="server" TextMode="Password"></asp:TextBox>
             <asp:Button ID="loginBtn" class="button-style" type="Submit" runat="server" Text="Login" OnClick="loginBtn_Click" />
             <asp:Button ID="registerBtn" class="button-style" type="Submit" runat="server" Text="Register" OnClick="registerBtn_Click" />
         </div>
