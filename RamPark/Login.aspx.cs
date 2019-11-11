@@ -45,6 +45,10 @@ namespace RamPark
             {
                 Response.Redirect("Home.aspx");
             }
+            else
+            {
+                ErrorLabel.Visible = true;
+            }
         }
 
         protected void registerBtn_Click(object sender, EventArgs e)

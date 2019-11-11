@@ -23,7 +23,6 @@ namespace RamPark
                 {
                     SqlConnection myConnection = new SqlConnection("Data Source=ram-park-sql-server.database.windows.net;Initial Catalog=RamParkDatabase;Persist Security Info=True;User ID=Garavuso;Password=Vinny1234");
                     string query = "INSERT INTO USERS VALUES (@RAMID, @F_Name, @L_Name, @Email, @RamPoints, @Employee, @Password, @Phone);";
-                    string q2 =    "INSERT INTO USERS VALUES (1656356,'Vinny','Garavuso','vinnyg96@hotmail.com',50,'N', 'Vinny1996',6313381942);";
                     User u = new User(Int32.Parse(ramIdTb.Text), fNameTb.Text, lNameTb.Text, emailTb.Text, passwordTb.Text, phoneTb.Text);
                     var command = new SqlCommand(query, myConnection);
                     command.Parameters.AddWithValue("@RAMID", u.RAM_ID);
@@ -43,10 +42,15 @@ namespace RamPark
                     //error inserting
                 }
             }
+            else
+            {
+                ErrorLabel.Visible = true;
+            }
         }
 
         protected void cancelBtn_Click(object sender, EventArgs e)
         {
+            
             Response.Redirect("Login.aspx");
         }
     }

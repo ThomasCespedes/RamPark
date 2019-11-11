@@ -59,8 +59,8 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator12" CssClass="required" runat="server" ControlToValidate="vehicleColorTb" ErrorMessage="*"></asp:RequiredFieldValidator>
             <asp:TextBox ID="vehicleColorTb" CssClass="input-style" runat="server"></asp:TextBox>
             <asp:Button ID="RegisterBtn" class="button-style" type="Submit" runat="server" Text="Register" OnClick="registerBtn_Click" />
-            <asp:Button ID="cancelBtn" class="button-style" type="Submit" runat="server" Text="Cancel" OnClick="cancelBtn_Click" />
-            <asp:Label ID="Label14" CssClass="error" runat="server" Text="Error, make sure all required fields are filled out and correct."></asp:Label>
+            <asp:Button ID="cancelBtn" class="button-style" type="Submit" runat="server" Text="Cancel" OnClick="cancelBtn_Click" CausesValidation="False" />
+            <asp:Label ID="ErrorLabel" CssClass="error" runat="server" Text="Error, make sure all required fields are filled out and correct." Visible="False"></asp:Label>
 
         </div>
     </form>

@@ -11,7 +11,21 @@ namespace RamPark
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
-        public int RAM_Points { get; set; }
+        public int RAM_Points
+        {
+            get
+            {
+                return RAM_Points;
+            }
+            //Only allow 0-10 RAM Points scale
+            set
+            {
+                if(RAM_Points <= 10 && RAM_Points >= 0)
+                {
+                    RAM_Points = value;
+                }
+            }
+        }
         //Password must be hashed in future. This is very insecure
         public string Password { get; set; }
         public string Phone { get; set; }
@@ -22,7 +36,8 @@ namespace RamPark
             FirstName = fName;
             LastName = lName;
             Email = email;
-            RAM_Points =  0;
+            //Points Closer to 0 = higher priority in queue
+            RAM_Points =  10;
             Password = password;
             Phone = phone;
         }
