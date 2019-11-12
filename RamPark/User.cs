@@ -11,18 +11,20 @@ namespace RamPark
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
+
+        private int m_ramPoints;
         public int RAM_Points
         {
             get
             {
-                return RAM_Points;
+                return m_ramPoints;
             }
             //Only allow 0-10 RAM Points scale
             set
             {
-                if(RAM_Points <= 10 && RAM_Points >= 0)
+                if(m_ramPoints <= 10 && m_ramPoints >= 0)
                 {
-                    RAM_Points = value;
+                    m_ramPoints = value;
                 }
             }
         }

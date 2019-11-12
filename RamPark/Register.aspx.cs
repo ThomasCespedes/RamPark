@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Text;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -21,9 +22,10 @@ namespace RamPark
             {
                 try
                 {
+                    string encryptedPass = encryptpass(passwordTb.Text);
                     SqlConnection myConnection = new SqlConnection("Data Source=ram-park-sql-server.database.windows.net;Initial Catalog=RamParkDatabase;Persist Security Info=True;User ID=Garavuso;Password=Vinny1234");
-                    string query = "INSERT INTO USERS VALUES (@RAMID, @F_Name, @L_Name, @Email, @RamPoints, @Employee, @Password, @Phone);";
-                    User u = new User(Int32.Parse(ramIdTb.Text), fNameTb.Text, lNameTb.Text, emailTb.Text, passwordTb.Text, phoneTb.Text);
+                    string query = "INSERT INTO USERS VALUES (@RAMID, @F_Name, @L_Name, @Email, @RamPoints, @Employee, @Phone, @Password);";
+                    User u = new User(Int32.Parse(ramIdTb.Text), fNameTb.Text, lNameTb.Text, emailTb.Text, encryptedPass, phoneTb.Text);
                     var command = new SqlCommand(query, myConnection);
                     command.Parameters.AddWithValue("@RAMID", u.RAM_ID);
                     command.Parameters.AddWithValue("@F_Name", u.FirstName);
@@ -31,10 +33,10 @@ namespace RamPark
                     command.Parameters.AddWithValue("@Email", u.Email);
                     command.Parameters.AddWithValue("@RamPoints", u.RAM_Points);
                     command.Parameters.AddWithValue("@Employee", 'N');
-                    command.Parameters.AddWithValue("@Password", u.Password);
+                    command.Parameters.AddWithValue("@Password", encryptedPass);
                     command.Parameters.AddWithValue("@Phone", u.Phone);
                     myConnection.Open();
-                    command.ExecuteNonQuery();
+                    int i = command.ExecuteNonQuery();
                     Response.Redirect("Login.aspx");
                 }
                 catch
@@ -46,6 +48,14 @@ namespace RamPark
             {
                 ErrorLabel.Visible = true;
             }
+        }
+        private string encryptpass(string password)
+        {
+            string msg = "";
+            byte[] encode = new byte[password.Length];
+            encode = Encoding.UTF8.GetBytes(password);
+            msg = Convert.ToBase64String(encode);
+            return msg;
         }
 
         protected void cancelBtn_Click(object sender, EventArgs e)

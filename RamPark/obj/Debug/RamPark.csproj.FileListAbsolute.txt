@@ -54,3 +54,13 @@ D:\Program Files\BCS430W\RamPark\RamPark\obj\Debug\RamPark.csproj.CopyComplete
 D:\Program Files\BCS430W\RamPark\RamPark\obj\Debug\RamPark.dll
 D:\Program Files\BCS430W\RamPark\RamPark\obj\Debug\RamPark.pdb
 D:\Program Files\BCS430W\RamPark\RamPark\obj\Debug\RamPark.csprojAssemblyReference.cache
+C:\Users\Erlich Bachman\Source\Repos\RamPark3\RamPark\bin\RamPark.dll.config
+C:\Users\Erlich Bachman\Source\Repos\RamPark3\RamPark\bin\RamPark.dll
+C:\Users\Erlich Bachman\Source\Repos\RamPark3\RamPark\bin\RamPark.pdb
+C:\Users\Erlich Bachman\Source\Repos\RamPark3\RamPark\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Erlich Bachman\Source\Repos\RamPark3\RamPark\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Erlich Bachman\Source\Repos\RamPark3\RamPark\obj\Debug\RamPark.csprojAssemblyReference.cache
+C:\Users\Erlich Bachman\Source\Repos\RamPark3\RamPark\obj\Debug\RamPark.csproj.CoreCompileInputs.cache
+C:\Users\Erlich Bachman\Source\Repos\RamPark3\RamPark\obj\Debug\RamPark.csproj.CopyComplete
+C:\Users\Erlich Bachman\Source\Repos\RamPark3\RamPark\obj\Debug\RamPark.dll
+C:\Users\Erlich Bachman\Source\Repos\RamPark3\RamPark\obj\Debug\RamPark.pdb
