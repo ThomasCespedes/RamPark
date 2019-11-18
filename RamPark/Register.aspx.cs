@@ -36,18 +36,18 @@ namespace RamPark
         }
         private void RegisterVehicleInformation()
         {
-            SqlConnection myConnection = new SqlConnection("Data Source=ram-park-sql-server.database.windows.net;Initial Catalog=RamParkDatabase;Persist Security Info=True;User ID=Garavuso;Password=Vinny1234");
-            string query = "INSERT INTO VEHICLES VALUES (@VIN, @year, @make, @model, @color, @licensePlate, @RAMID);";
-            var command = new SqlCommand(query, myConnection);
-            command.Parameters.AddWithValue("@VIN", vinTb.Text);
-            command.Parameters.AddWithValue("@year", vehicleYearTb.Text);
-            command.Parameters.AddWithValue("@make", vehicleMakeTb.Text);
-            command.Parameters.AddWithValue("@model", vehicleModelTb.Text);
-            command.Parameters.AddWithValue("@color", vehicleColorTb.Text);
-            command.Parameters.AddWithValue("@licensePlate", licensePlateTb.Text);
-            command.Parameters.AddWithValue("@RAMID", ramIdTb.Text);
-            myConnection.Open();
-            int i = command.ExecuteNonQuery();
+            //SqlConnection myConnection = new SqlConnection("Data Source=ram-park-sql-server.database.windows.net;Initial Catalog=RamParkDatabase;Persist Security Info=True;User ID=Garavuso;Password=Vinny1234");
+            //string query = "INSERT INTO VEHICLES VALUES (@VIN, @year, @make, @model, @color, @licensePlate, @RAMID);";
+            //var command = new SqlCommand(query, myConnection);
+            //command.Parameters.AddWithValue("@VIN", vinTb.Text);
+            //command.Parameters.AddWithValue("@year", vehicleYearTb.Text);
+            //command.Parameters.AddWithValue("@make", vehicleMakeTb.Text);
+            //command.Parameters.AddWithValue("@model", vehicleModelTb.Text);
+            //command.Parameters.AddWithValue("@color", vehicleColorTb.Text);
+            //command.Parameters.AddWithValue("@licensePlate", licensePlateTb.Text);
+            //command.Parameters.AddWithValue("@RAMID", ramIdTb.Text);
+            //myConnection.Open();
+            //int i = command.ExecuteNonQuery();
         }
 
         protected void registerBtn_Click(object sender, EventArgs e)
