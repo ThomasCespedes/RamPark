@@ -61,6 +61,7 @@
             <asp:Button ID="RegisterBtn" class="button-style" type="Submit" runat="server" Text="Register" OnClick="registerBtn_Click" />
             <asp:Button ID="cancelBtn" class="button-style" type="Submit" runat="server" Text="Cancel" OnClick="cancelBtn_Click" CausesValidation="False" />
             <asp:Label ID="ErrorLabel" CssClass="error" runat="server" Text="Error, make sure all required fields are filled out and correct." Visible="False"></asp:Label>
+            <asp:Label ID="DatabaseErrorLabel" CssClass="error" runat="server" Text="Database error: Likely could not connect to the DB. Please try again." Visible="False"></asp:Label>
 
         </div>
     </form>

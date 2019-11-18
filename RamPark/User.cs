@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -42,6 +43,30 @@ namespace RamPark
             RAM_Points =  10;
             Password = password;
             Phone = phone;
+        }
+        public User()
+        {
+            Random rnd1 = new Random();
+            RAM_ID = rnd1.Next(1000000, 9999999);
+            FirstName = "Dummy";
+            LastName = "Data";
+            Email = "DummyData@data.com";
+            //Create random RamPoints
+            Random rnd2 = new Random();
+            RAM_Points = rnd2.Next(1,10);
+            Password = "DummyPassword";
+            Phone = "1111111111";
+        }
+        public User(DataRow row)
+        {
+            
+            RAM_ID = row.Field<int>("RAMID");
+            FirstName = row.Field<string>("FirstName");
+            LastName = row.Field<string>("LastName");
+            Email = row.Field<string>("Email");
+            RAM_Points = row.Field<int>("RamPoints");
+            Phone = row.Field<string>("Phone");
+            Password = row.Field<string>("Password");
         }
     }
 }

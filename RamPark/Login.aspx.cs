@@ -32,9 +32,6 @@ namespace RamPark
 
         protected void loginBtn_Click(object sender, EventArgs e)
         {
-            /*<add name="SQLConnection" providerName="System.Data.SqlClient"
-      connectionString="Data Source=ram-park-sql-server.database.windows.net;Initial Catalog=RamParkDatabase;Persist Security Info=True;User ID=Garavuso;Password=Vinny1234"/>
-  </connectionStrings>*/
             string encryptedPass = encryptpass(passwordTb.Text);
             SqlConnection myConnection = new SqlConnection("Data Source=ram-park-sql-server.database.windows.net;Initial Catalog=RamParkDatabase;Persist Security Info=True;User ID=Garavuso;Password=Vinny1234");
             string query = "SELECT Email, Password FROM USERS where UPPER(email) = @uEmail AND password=@uPassword";
