@@ -44,7 +44,7 @@
 
         <div class="container">
             <img src="meme2.jpg" alt="Avatar" style="width:120px">
-                <p><span >Vinny</span> Group Member 2</p>
+                <p><span >Vinny Garavuso</span> Group Member 2</p>
                 <p>My favorite programming language is C# so programming this applicaiton in ASP.net was a lot of fun! I am also graduating at the
                     end of this semester.
                 </p>
@@ -52,14 +52,14 @@
 
         <div class="container">
             <img src="meme3.jpg" alt="Avatar" style="width:120px">
-                 <p><span >Lind</span> Group Member 3</p>
+                 <p><span >Michael Lindner</span> Group Member 3</p>
                  <p>No one is better than John Doe.</p>
         </div>
 
         <div class="container">
              <img src="meme4.jpg" alt="Avatar" style="width:120px">
-                <p><span >Thomas</span> Group Member 4</p>
-                <p>No one is better than John Doe.</p>
+                <p><span >Thomas Cespedes</span> Group Member 4</p>
+                <p>I Really enjoyed putting this project together! Alot of fun for my final Assignment at Farmingdale</p>
         </div>
 </article>
 

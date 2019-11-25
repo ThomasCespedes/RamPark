@@ -32,6 +32,7 @@ namespace RamPark
             if (reader.Read())
             {
                 Response.Redirect("Home.aspx");
+                
             }
             else
             {
