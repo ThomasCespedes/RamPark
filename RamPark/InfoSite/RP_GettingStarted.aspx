@@ -33,13 +33,13 @@
 
 <article>
     <header>
-        <h1>Getting Started with RamPark!  </h1>
+        <h1>Getting Started with RamPark! <br />  (If stretch goals are complete)</h1>
     </header>
 
     <section id="middleColumn">  <!--ID LOCATED IN rb_styles1 -->
         <ol>
             <p>
-                <ul style="list-style-type:disc;"><li><strong>If you already have an account with Ram Park please login! (If stretch goals are complete) </strong></li></ul>
+                <ul style="list-style-type:disc;"><li><strong>If you already have an account with Ram Park please login!  </strong></li></ul>
                 <ul style="list-style-type:square;"><li><strong>If you do not have an account pelase follow the directions below!</strong></li></ul>
                 <li>You must be a student attending Farmingdale State College.</li>
                 <li>This will <strong>only</strong> work if you have a Farmingdale e-amil account!</li>
