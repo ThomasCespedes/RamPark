@@ -18,7 +18,7 @@
 <body>
     <header>
         <div style="background-color: #006456; padding: 15px;">
-        <img src="logo-login.png" alt="RamPark" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+        <img src="logo-infoSite.png" alt="RamPark" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
         </div>
             <nav class="horizontal" id="mainLinks">
                 <ul>

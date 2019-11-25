@@ -76,7 +76,7 @@
     <Content Include="Home.aspx" />
     <Content Include="InfoSite\blackbackground.png" />
     <Content Include="InfoSite\Farmingdale_seal.png" />
-    <Content Include="InfoSite\logo-login.png" />
+    <Content Include="InfoSite\logo-infoSite.png" />
     <Content Include="InfoSite\logo.png" />
     <Content Include="InfoSite\meme1.jpg" />
     <Content Include="InfoSite\meme2.jpg" />
