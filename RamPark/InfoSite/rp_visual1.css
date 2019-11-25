@@ -1,0 +1,105 @@
+﻿@charset "utf-8";
+/*
+   Author: Deonarine Ricky Budhu
+*/
+
+
+/* Figure Box Styles */
+figure 
+	{
+		/*border-style: solid;
+		border-width: 25px;
+		border-image: url(tb_border.png) 50 repeat;
+		margin: 20px auto 0px;
+		opacity: 0.55;
+		width: 80%;*/
+	}
+	
+figure img 
+	{
+		display: block;
+		width: 100%;
+	}
+
+figure figcaption 
+	{
+		background-color: white;
+		font-family: 'Palatino Linotype', Palatino,'Times New Roman', serif;
+		font-style: italic;
+		padding: 10px 0;
+		text-align: center;
+	}
+/* HTML Styles */
+
+html 
+	{
+		/*background-image: url(RamMascotLogo.png);*/
+	}
+
+
+/* Article Styles */
+article 
+	{
+	background: rgb(0, 51, 51);
+
+	}
+	
+article header h1 
+		{
+			color: rgb(255, 255, 255);
+		}
+
+
+/* Page Body Styles */
+
+body 
+	{
+		border-left: 1px solid rgb(51, 51, 51);
+		border-right: 1px solid rgb(51, 51, 51);
+	}
+
+
+/* Aside Styles */
+aside 	
+	{
+		background:radial-gradient(white, rgb(151, 222, 151),rgb(81, 125, 81));
+		border: 4px double rgb(45, 93, 62);
+		border-radius: 30px;
+		box-shadow: rgba(51, 91, 51, 0.4) 0px 0px 20px 10px;
+	}
+
+
+/* Footer Styles */
+footer 
+{
+	background: linear-gradient(345deg, rgb(172, 232, 172), rgb(21, 35, 21) 80%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BCS 130 Tutorial 4 SLN */
