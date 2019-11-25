@@ -47,10 +47,9 @@
 				<ItemStyle CssClass="GridItem"></ItemStyle>
 				<AlternatingItemStyle CssClass="GridAltItem"></AlternatingItemStyle></asp:DataGrid>
             </div>
-               <asp:HyperLink id="hyperlink1" 
-                  NavigateUrl="~/InfoSite/RamPark_home.aspx"
-                  Text="RamPark Information"
-                  runat="server"/> 
+            <ul>
+	                <li><a href="InfoSite/RamPark_home.aspx">RamPark Info.</a></li>
+            </ul>
         </div>
    
     </form>
