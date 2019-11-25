@@ -33,7 +33,7 @@
 
 <article>
     <header>
-        <h1>Getting Started with RamPark! <br />  (If stretch goals are complete)</h1>
+        <h1>Getting Started with RamPark!     (If stretch goals are complete)</h1>
     </header>
 
     <section id="middleColumn">  <!--ID LOCATED IN rb_styles1 -->
