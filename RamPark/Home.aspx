@@ -48,9 +48,8 @@
 				<AlternatingItemStyle CssClass="GridAltItem"></AlternatingItemStyle></asp:DataGrid>
             </div>
                <asp:HyperLink id="hyperlink1" 
-                  NavigateUrl="~/infosite/rampark_home.aspx"
+                  NavigateUrl="~/InfoSite/RamPark_home.aspx"
                   Text="RamPark Information"
-                  Target="_new"
                   runat="server"/> 
         </div>
    
