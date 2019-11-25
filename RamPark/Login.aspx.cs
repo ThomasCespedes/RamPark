@@ -14,17 +14,6 @@ namespace RamPark
 {
     public partial class Login : System.Web.UI.Page
     {
-        /*
-         
-  <connectionStrings>
-    <add name="SQLConnection" providerName="System.Data.SqlClient"
-      connectionString="Data Source=ram-park-sql-server-database.windows.net;Integrated Security=False;User ID=Garavuso;Password=Vinny123" />
-  </connectionStrings>
-             
-             */
-
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
