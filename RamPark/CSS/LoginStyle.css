@@ -10,6 +10,10 @@
     padding: 20px;
     margin-top: 20px;
 }
+.image-div-style {
+    background-color: #006456;
+    padding: 15px;
+}
 
 .required {
     color: red;

@@ -17,7 +17,9 @@
 
 <body>
     <header>
-        <img src="logo.png" alt="RamPark" width="200" height="200">
+        <div style="background-color: #006456; padding: 15px;">
+        <img src="logo-login.png" alt="RamPark" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+        </div>
             <nav class="horizontal" id="mainLinks">
                 <ul>
 	                <li><a href="RamPark_home.aspx">Home</a></li>
@@ -34,19 +36,38 @@
         <h1>RamPark FAQ </h1>
     </header>
 
-        <button class="accordion">Knock Knock</button>
+        <button class="accordion">What is this application used for?</button>
             <div class="panel">
-                <p>Who's There</p>
+                <p>
+                    This app was designed for college students to find spots in a reasonable amount of time. Students can queue on line for a
+                    spot and will be alerted when one is found for them.
+                </p>
             </div>
 
-        <button class="accordion">Who</button>
+        <button class="accordion">How does this app work?</button>
             <div class="panel" >
-                <p>who who?</p>
+                <p>
+                    Both students leaving campus and just getting on campus are encouraged to use this app. Students entering the queue for a spot
+                    will be matched with a student who is leaving their spot. Your personal Ram Points and your initial time joining the queue will
+                    determine how quickly you get matched with a spot.
+                </p>
             </div>
 
-        <button class="accordion">o.o</button>
+        <button class="accordion">How do I get a spot faster?</button>
             <div class="panel">
-                <p>What are you, an owl?</p>
+                <p>
+                    Since your queue spot is determined mostly by your Ram Points, keeping them low should be a priority for you. This can be accomplished in
+                    3 ways.
+                    <br />
+                    <br />
+                    1) Arriving to your paired spot in a timely manor and being rated well by your paired driver.
+                    <br />
+                    <br />
+                    2) Alerting the system that you are leaving your spot so other can be paired to it.
+                    <br />
+                    <br />
+                    3) Alerting the campus PD of violations such as users stealing spots or your paired driver not waiting for you to trade spots.
+                </p>
             </div>
 
     <script>

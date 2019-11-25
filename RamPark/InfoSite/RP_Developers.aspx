@@ -16,7 +16,9 @@
 
 <body>
     <header>
-        <img src="logo.png" alt="RamPark" width="200" height="200">
+        <div style="background-color: #006456; padding: 15px;">
+        <img src="logo-login.png" alt="RamPark" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+        </div>
             <nav class="horizontal" id="mainLinks">
                 <ul>
 	                <li><a href="RamPark_home.aspx">Home</a></li>
@@ -43,7 +45,9 @@
         <div class="container">
             <img src="meme2.jpg" alt="Avatar" style="width:120px">
                 <p><span >Vinny</span> Group Member 2</p>
-                <p>No one is better than John Doe.</p>
+                <p>My favorite programming language is C# so programming this applicaiton in ASP.net was a lot of fun! I am also graduating at the
+                    end of this semester.
+                </p>
         </div>
 
         <div class="container">

@@ -17,7 +17,9 @@
 
 <body>
     <header>
-        <img src="logo.png" alt="RamPark" width="200" height="200">
+        <div style="background-color: #006456; padding: 15px;">
+        <img src="logo-login.png" alt="RamPark" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+        </div>
             <nav class="horizontal" id="mainLinks">
                 <ul>
 	                <li><a href="RamPark_home.aspx">Home</a></li>
@@ -37,7 +39,7 @@
     <section id="middleColumn">  <!--ID LOCATED IN rb_styles1 -->
         <ol>
             <p>
-                <ul style="list-style-type:disc;"><li><strong>If you already have an account with Ram Park please login!</strong></li></ul>
+                <ul style="list-style-type:disc;"><li><strong>If you already have an account with Ram Park please login! (If stretch goals are complete) </strong></li></ul>
                 <ul style="list-style-type:square;"><li><strong>If you do not have an account pelase follow the directions below!</strong></li></ul>
                 <li>You must be a student attending Farmingdale State College.</li>
                 <li>This will <strong>only</strong> work if you have a Farmingdale e-amil account!</li>
@@ -45,10 +47,6 @@
                 <li>Click register.</li>
                 <li>Provide information that's needed such as email, RAM ID, name, vehicle information, etc.</li>
                 <li>Once registered, if done correctly, you will be able to login to the RamPark website</li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
              </p>
         </ol>
     </section>

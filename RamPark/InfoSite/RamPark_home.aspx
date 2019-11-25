@@ -17,7 +17,9 @@
 
 <body>
     <header>
-        <img src="logo.png" alt="RamPark" width="200" height="200">
+        <div style="background-color: #006456; padding: 15px;">
+        <img src="logo-login.png" alt="RamPark" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+        </div>
             <nav class="horizontal" id="mainLinks">
                 <ul>
 	                <li><a href="RamPark_home.aspx">Home</a></li>
