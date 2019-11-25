@@ -31,23 +31,23 @@ namespace RamPark
             command.Parameters.AddWithValue("@Password", encryptedPass);
             command.Parameters.AddWithValue("@Phone", u.Phone);
             myConnection.Open();
-            int i = command.ExecuteNonQuery();
+            command.ExecuteNonQuery();
 
         }
         private void RegisterVehicleInformation()
         {
-            //SqlConnection myConnection = new SqlConnection("Data Source=ram-park-sql-server.database.windows.net;Initial Catalog=RamParkDatabase;Persist Security Info=True;User ID=Garavuso;Password=Vinny1234");
-            //string query = "INSERT INTO VEHICLES VALUES (@VIN, @year, @make, @model, @color, @licensePlate, @RAMID);";
-            //var command = new SqlCommand(query, myConnection);
-            //command.Parameters.AddWithValue("@VIN", vinTb.Text);
-            //command.Parameters.AddWithValue("@year", vehicleYearTb.Text);
-            //command.Parameters.AddWithValue("@make", vehicleMakeTb.Text);
-            //command.Parameters.AddWithValue("@model", vehicleModelTb.Text);
-            //command.Parameters.AddWithValue("@color", vehicleColorTb.Text);
-            //command.Parameters.AddWithValue("@licensePlate", licensePlateTb.Text);
-            //command.Parameters.AddWithValue("@RAMID", ramIdTb.Text);
-            //myConnection.Open();
-            //int i = command.ExecuteNonQuery();
+            SqlConnection myConnection = new SqlConnection("Data Source=ram-park-sql-server.database.windows.net;Initial Catalog=RamParkDatabase;Persist Security Info=True;User ID=Garavuso;Password=Vinny1234");
+            string query = "INSERT INTO VEHICLES VALUES (@VIN, @year, @make, @model, @color, @licensePlate, @RAMID);";
+            var command = new SqlCommand(query, myConnection);
+            command.Parameters.AddWithValue("@VIN", vinTb.Text);
+            command.Parameters.AddWithValue("@year", Convert.ToInt32(dropDownListYear.SelectedItem.Value));
+            command.Parameters.AddWithValue("@make", dropDownListMake.SelectedItem.Value);
+            command.Parameters.AddWithValue("@model", dropDownListModel.SelectedItem.Value);
+            command.Parameters.AddWithValue("@color", dropDownListColor.SelectedItem.Value);
+            command.Parameters.AddWithValue("@licensePlate", licensePlateTb.Text);
+            command.Parameters.AddWithValue("@RAMID", ramIdTb.Text);
+            myConnection.Open();
+            command.ExecuteNonQuery();
         }
 
         protected void registerBtn_Click(object sender, EventArgs e)
@@ -83,6 +83,26 @@ namespace RamPark
         {
             
             Response.Redirect("Login.aspx");
+        }
+
+        protected void Make_Selection_Change(object sender, EventArgs e)
+        {
+            vehicleMakeTb.Text = dropDownListMake.SelectedItem.Value;
+        }
+
+        protected void Model_Selection_Change(object sender, EventArgs e)
+        {
+            vehicleModelTb.Text = dropDownListModel.SelectedItem.Value;
+        }
+
+        protected void Year_Selection_Change(object sender, EventArgs e)
+        {
+            vehicleYearTb.Text = dropDownListYear.SelectedItem.Value;
+        }
+
+        protected void Color_Selection_Change(object sender, EventArgs e)
+        {
+            vehicleColorTb.Text = dropDownListColor.SelectedItem.Value;
         }
     }
 }

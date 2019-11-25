@@ -310,6 +310,15 @@ namespace RamPark {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
+        /// dropDownListMake control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropDownListMake;
+        
+        /// <summary>
         /// RequiredFieldValidator9 control.
         /// </summary>
         /// <remarks>
@@ -335,6 +344,15 @@ namespace RamPark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label8;
+        
+        /// <summary>
+        /// dropDownListModel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropDownListModel;
         
         /// <summary>
         /// RequiredFieldValidator10 control.
@@ -364,6 +382,15 @@ namespace RamPark {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
+        /// dropDownListYear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropDownListYear;
+        
+        /// <summary>
         /// RequiredFieldValidator11 control.
         /// </summary>
         /// <remarks>
@@ -389,6 +416,15 @@ namespace RamPark {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label10;
+        
+        /// <summary>
+        /// dropDownListColor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropDownListColor;
         
         /// <summary>
         /// RequiredFieldValidator12 control.
