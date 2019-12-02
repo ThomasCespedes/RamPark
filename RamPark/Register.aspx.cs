@@ -13,11 +13,11 @@ namespace RamPark
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (this.IsPostBack)
-            //{
-            //    passwordTb.Attributes["value"] = passwordTb.Text;
-            //    repeatPasswordTb.Attributes["value"] = repeatPasswordTb.Text;
-            //}
+            if (this.IsPostBack)
+            {
+                passwordTb.Attributes["value"] = passwordTb.Text;
+                repeatPasswordTb.Attributes["value"] = repeatPasswordTb.Text;
+            }
         }
         private void RegisterUserInformation()
         {
