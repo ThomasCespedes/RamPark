@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Web;
 using System.Web.UI;
@@ -17,7 +18,18 @@ namespace RamPark
         {
             //if user not logged in send to login / register page
 
-            ReloadDataGrid();
+            if (!IsPostBack)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    ReloadDataGrid();
+                    //StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
+                }
+                else
+                {
+                    Response.Redirect("Login.aspx");
+                }
+            }
 
         }
         private void ReloadDataGrid()
@@ -152,6 +164,30 @@ namespace RamPark
             {
                 dequeueUpdateLbl.Text = "SERVER ERROR";
             }
+        }
+
+        protected void reportViolation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void sendViolation_Click(object sender, EventArgs e)
+        {
+            //SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 465);
+
+            //smtpClient.Credentials = new System.Net.NetworkCredential("RAMPARKSERVICES@GMAIL.COM", "RAMpark123!");
+            //smtpClient.UseDefaultCredentials = true;
+            //smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+            //smtpClient.EnableSsl = true;
+            //MailMessage mail = new MailMessage();
+
+            ////Setting From , To and CC
+            //mail.From = new MailAddress("RAMPARKSERVICES@GMAIL.COM", "RAM Park");
+            //mail.To.Add(new MailAddress("RAMPARKSERVICES@GMAIL.COM"));
+            //mail.Subject = "VIOLATION REPORTED";
+            //mail.Body = "VIOLATION: ";
+
+            //smtpClient.Send(mail);
         }
     }
 }

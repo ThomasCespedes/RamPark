@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="RamPark.Home" %>
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>  
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,6 @@
     </head>
 <body>
     <form id="form1" runat="server">
-
         <div class="login-style">
             <div style="text-align:center">
                 <asp:Label ID="Label5" CssClass="label-devtools-style" runat="server" Text="Developer Tools"></asp:Label>
@@ -39,8 +38,24 @@
             </div>
             <div style="padding-bottom:15px">
                 <asp:Label ID="Label4" runat="server" Text="Most recent Dequeue: " CssClass="label-style"></asp:Label>
-                <asp:Label ID="dequeueUpdateLbl" runat="server" Text="" CssClass="label-style"></asp:Label>
+                <asp:Label ID="dequeueUpdateLbl" runat="server" Text="" CssClass="label-style"></asp:Label>              
             </div>
+
+            <asp:ScriptManager ID="ScriptManager2" runat="server">  
+            </asp:ScriptManager>  
+            <div style="padding-bottom:15px">    
+            <asp:Button ID="Button1" runat="server" Text="Report Violation"  CssClass="BUTTON_XWX"/>  
+            </div>
+            <cc1:ModalPopupExtender ID="mp1" runat="server" PopupControlID="Panl1" TargetControlID="Button1"  
+                                    CancelControlID="closeButton" BackgroundCssClass="Background">  
+            </cc1:ModalPopupExtender>  
+            <asp:Panel ID="Panl1" runat="server" CssClass="Popup" align="center" style = "display:none">  
+            <iframe style=" width: 350px; height: 300px;" id="irm1" src="ReportViolation.aspx" runat="server"></iframe>  
+            <br/>  
+            <asp:Button ID="closeButton" runat="server" Text="Close" CssClass="BUTTON_XWX" />  
+            <asp:Button ID="sendButton" runat="server" Text="Send" CssClass="BUTTON_XWX" OnClick="sendViolation_Click" />  
+            </asp:Panel>  
+
             <div  style ="height:500px; width:auto; overflow:auto;">
                 <asp:DataGrid ID="MyDataGrid" runat="server" HorizontalAlign="Center" CssClass="Grid">
 				<HeaderStyle CssClass="GridHeader"></HeaderStyle>
@@ -50,8 +65,10 @@
             <ul>
 	                <li><a href="InfoSite/RamPark_home.aspx">RamPark Info.</a></li>
             </ul>
+
+
         </div>
-   
+
     </form>
 </body>
 </html>

@@ -67,3 +67,27 @@ D:\Program Files\BCS430W\RamPark\RamPark\obj\Debug\RamPark.csprojAssemblyReferen
 D:\Program Files\BCS430W\RamPark\RamPark\bin\Priority Queue.dll
 D:\Program Files\BCS430W\RamPark\RamPark\bin\Priority Queue.pdb
 D:\Program Files\BCS430W\RamPark\RamPark\bin\Priority Queue.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\EntityFramework.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\EntityFramework.SqlServer.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.Owin.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.Owin.Security.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Newtonsoft.Json.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Owin.dll
+D:\Program Files\BCS430W\RamPark\RamPark\bin\EntityFramework.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\EntityFramework.SqlServer.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.Owin.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.Owin.Security.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\Newtonsoft.Json.xml
+D:\Program Files\BCS430W\RamPark\RamPark\bin\AjaxControlToolkit.dll
