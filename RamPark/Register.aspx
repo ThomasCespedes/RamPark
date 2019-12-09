@@ -50,6 +50,7 @@
             <asp:TextBox ID="lNameTb" CssClass="input-style" runat="server"></asp:TextBox>
             <asp:Label ID="Label13" CssClass="label-style" runat="server" Text="Phone Number"></asp:Label>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator13" CssClass="required" runat="server" ControlToValidate="repeatPasswordTb" ErrorMessage="Invalid Phone"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="phoneTb" CssClass="required" ErrorMessage="Invalid Phone Number" ValidationExpression="^([\+]?(?:00)?[0-9]{1,3}[\s.-]?[0-9]{1,12})([\s.-]?[0-9]{1,4}?)$"></asp:RegularExpressionValidator>
             <asp:TextBox ID="phoneTb" CssClass="input-style" runat="server" TextMode="Phone"></asp:TextBox>
             <asp:Label ID="Label155" CssClass="label-style" runat="server" Text="Password"></asp:Label>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" CssClass="required" runat="server" ControlToValidate="passwordTb" ErrorMessage="Invalid Password"></asp:RequiredFieldValidator>
@@ -62,7 +63,9 @@
             </div>
             <asp:Label ID="Label6" CssClass="label-style" runat="server" Text="VIN"></asp:Label>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" CssClass="required" runat="server" ControlToValidate="vinTb" ErrorMessage="Invalid VIN"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="vinTb" CssClass="required" ErrorMessage="Invalid VIN" ValidationExpression="[A-HJ-NPR-Z0-9]{13}[0-9]{4}"></asp:RegularExpressionValidator><asp:TextBox ID="vinTb" CssClass="input-style" runat="server"></asp:TextBox>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="vinTb" CssClass="required" ErrorMessage="Invalid VIN" ValidationExpression="[A-HJ-NPR-Z0-9]{13}[0-9]{4}"></asp:RegularExpressionValidator><asp:TextBox ID="vinTb" CssClass="input-style" runat="server">
+
+                                                                                                                                                                                                                                                         </asp:TextBox>
             <asp:Label ID="Label11" CssClass="label-style" runat="server" Text="License Plate Number"></asp:Label>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" CssClass="required" runat="server" ControlToValidate="licensePlateTb" ErrorMessage="Invalid License Plate"></asp:RequiredFieldValidator>
             <asp:TextBox ID="licensePlateTb" CssClass="input-style" runat="server"></asp:TextBox>
