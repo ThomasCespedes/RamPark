@@ -73,9 +73,6 @@ namespace RamPark
                 {
                     try
                     {
-                        var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
-                        var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
-                        authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
                         RegisterUserInformation();
                         RegisterVehicleInformation();
                         Response.Redirect("Login.aspx");
