@@ -18,18 +18,7 @@ namespace RamPark
         {
             //if user not logged in send to login / register page
 
-            if (!IsPostBack)
-            {
-                if (User.Identity.IsAuthenticated)
-                {
-                    ReloadDataGrid();
-                    //StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
-                }
-                else
-                {
-                    Response.Redirect("Login.aspx");
-                }
-            }
+            ReloadDataGrid();
 
         }
         private void ReloadDataGrid()
