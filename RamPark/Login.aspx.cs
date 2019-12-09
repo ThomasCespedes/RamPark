@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
@@ -31,8 +34,18 @@ namespace RamPark
             var reader = command.ExecuteReader();
             if (reader.Read())
             {
-                Response.Redirect("Home.aspx");
-                
+                var userStore = new UserStore<IdentityUser>();
+                var userManager = new UserManager<IdentityUser>(userStore);
+                var user = userManager.Find(emailTb.Text, passwordTb.Text);
+
+                if (user != null)
+                {
+                    var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                    var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+
+                    authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
+                    Response.Redirect("Home.aspx");
+                }
             }
             else
             {

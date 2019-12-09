@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #b5ebcd;
+    background-color: #006456;
 }
 
 .login-style {
@@ -10,6 +10,7 @@
     padding: 20px;
     margin-top: 20px;
 }
+
 .image-div-style {
     background-color: #006456;
     padding: 15px;
@@ -19,6 +20,7 @@
     color: red;
     font-family: Arial;
 }
+
 .Background {
     background-color: Black;
     filter: alpha(opacity=90);
@@ -55,6 +57,7 @@
     color: white;
     font-family: Arial;
 }
+
 .label-devtools-style {
     color: white;
     padding-top: 5px;
@@ -63,14 +66,16 @@
     font-family: Arial;
     display: inline-block;
 }
+
 .label-breaker-style {
     color: white;
-    padding-top:30px;
-    padding-bottom:10px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     font-size: 20px;
     font-family: Arial;
-    display:inline-block;
+    display: inline-block;
 }
+
 .image-style {
     width: 50%;
     display: block;

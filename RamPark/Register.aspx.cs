@@ -6,6 +6,9 @@ using System.Web;
 using System.Text;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
 
 namespace RamPark
 {
@@ -40,39 +43,60 @@ namespace RamPark
         }
         private void RegisterVehicleInformation()
         {
-            SqlConnection myConnection = new SqlConnection("Data Source=ram-park-sql-server.database.windows.net;Initial Catalog=RamParkDatabase;Persist Security Info=True;User ID=Garavuso;Password=Vinny1234");
-            string query = "INSERT INTO VEHICLES VALUES (@VIN, @year, @make, @model, @color, @licensePlate, @RAMID);";
-            var command = new SqlCommand(query, myConnection);
-            command.Parameters.AddWithValue("@VIN", vinTb.Text);
-            command.Parameters.AddWithValue("@year", Convert.ToInt32(dropDownListYear.SelectedItem.Value));
-            command.Parameters.AddWithValue("@make", dropDownListMake.SelectedItem.Value);
-            command.Parameters.AddWithValue("@model", dropDownListModel.SelectedItem.Value);
-            command.Parameters.AddWithValue("@color", dropDownListColor.SelectedItem.Value);
-            command.Parameters.AddWithValue("@licensePlate", licensePlateTb.Text);
-            command.Parameters.AddWithValue("@RAMID", ramIdTb.Text);
-            myConnection.Open();
-            command.ExecuteNonQuery();
+            //SqlConnection myConnection = new SqlConnection("Data Source=ram-park-sql-server.database.windows.net;Initial Catalog=RamParkDatabase;Persist Security Info=True;User ID=Garavuso;Password=Vinny1234");
+            //string query = "INSERT INTO VEHICLES VALUES (@VIN, @year, @make, @model, @color, @licensePlate, @RAMID);";
+            //var command = new SqlCommand(query, myConnection);
+            //command.Parameters.AddWithValue("@VIN", vinTb.Text);
+            //command.Parameters.AddWithValue("@year", Convert.ToInt32(dropDownListYear.SelectedItem.Value));
+            //command.Parameters.AddWithValue("@make", dropDownListMake.SelectedItem.Value);
+            //command.Parameters.AddWithValue("@model", dropDownListModel.SelectedItem.Value);
+            //command.Parameters.AddWithValue("@color", dropDownListColor.SelectedItem.Value);
+            //command.Parameters.AddWithValue("@licensePlate", licensePlateTb.Text);
+            //command.Parameters.AddWithValue("@RAMID", ramIdTb.Text);
+            //myConnection.Open();
+            //command.ExecuteNonQuery();
         }
 
         protected void registerBtn_Click(object sender, EventArgs e)
         {
+
+
+            var userStore = new UserStore<IdentityUser>();
+            var manager = new UserManager<IdentityUser>(userStore);
+
+            var user = new IdentityUser() { UserName = emailTb.Text };
+            IdentityResult result = manager.Create(user, passwordTb.Text);
+
             if (Page.IsValid)
             {
-                try
+                if (result.Succeeded)
                 {
-                    RegisterUserInformation();
-                    RegisterVehicleInformation();
-                    Response.Redirect("Login.aspx");
+                    try
+                    {
+                        var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                        var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                        authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+                        RegisterUserInformation();
+                        RegisterVehicleInformation();
+                        Response.Redirect("Login.aspx");
+                    }
+                    catch
+                    {
+                        DatabaseErrorLabel.Visible = true;
+                    }
                 }
-                catch
+                else
                 {
-                    DatabaseErrorLabel.Visible = true;
+                    //StatusMessage.Text = result.Errors.FirstOrDefault();
                 }
             }
             else
             {
                 ErrorLabel.Visible = true;
             }
+
+
+
         }
         private string encryptpass(string password)
         {
