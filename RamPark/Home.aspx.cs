@@ -80,7 +80,7 @@ namespace RamPark
             var command = new SqlCommand(query, myConnection);
             command.Parameters.AddWithValue("@RAMID", u.RAM_ID);
             myConnection.Open();
-            int i = command.ExecuteNonQuery();
+            command.ExecuteNonQuery();
         }
         public void AddUserToDatabase(User u)
         {
@@ -97,11 +97,11 @@ namespace RamPark
             command.Parameters.AddWithValue("@Password", encryptedPass);
             command.Parameters.AddWithValue("@Phone", u.Phone);
             myConnection.Open();
-            int i = command.ExecuteNonQuery();
+            command.ExecuteNonQuery();
         }
         private string encryptpass(string password)
         {
-            string msg = "";
+            string msg;
             byte[] encode = new byte[password.Length];
             encode = Encoding.UTF8.GetBytes(password);
             msg = Convert.ToBase64String(encode);
@@ -151,7 +151,7 @@ namespace RamPark
             }
             catch (Exception e)
             {
-                dequeueUpdateLbl.Text = "SERVER ERROR";
+                dequeueUpdateLbl.Text = "SERVER ERROR" + e.Message;
             }
         }
 
