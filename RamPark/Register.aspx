@@ -146,8 +146,8 @@
                </asp:DropDownList>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator12" CssClass="required" runat="server" ControlToValidate="vehicleColorTb" ErrorMessage="Invalid Color"></asp:RequiredFieldValidator>
             <asp:TextBox ID="vehicleColorTb" CssClass="input-style" runat="server" ReadOnly="True"></asp:TextBox>
-            <asp:Button ID="RegisterBtn" class="button-style" type="Submit" runat="server" Text="Register" OnClick="registerBtn_Click" />
-            <asp:Button ID="cancelBtn" class="button-style" type="Submit" runat="server" Text="Cancel" OnClick="cancelBtn_Click" CausesValidation="False" />
+            <asp:Button ID="RegisterBtn" CssClass="button-style" runat="server" Text="Register" OnClick="registerBtn_Click" />
+            <asp:Button ID="cancelBtn" CssClass="button-style" runat="server" Text="Cancel" OnClick="cancelBtn_Click" CausesValidation="False" />
             <asp:Label ID="ErrorLabel" CssClass="error" runat="server" Text="Error, make sure all required fields are filled out and correct." Visible="False"></asp:Label>
             <asp:Label ID="DatabaseErrorLabel" CssClass="error" runat="server" Text="Database error: Likely could not connect to the DB. Please try again." Visible="False"></asp:Label>
 

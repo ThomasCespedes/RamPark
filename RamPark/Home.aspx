@@ -64,7 +64,7 @@
             <cc1:ModalPopupExtender ID="mp1" runat="server" PopupControlID="Panl1" TargetControlID="Button1"  
                                     CancelControlID="closeButton" BackgroundCssClass="Background">  
             </cc1:ModalPopupExtender>  
-            <asp:Panel ID="Panl1" runat="server" CssClass="Popup" align="center" style = "display:none">  
+            <asp:Panel ID="Panl1" runat="server" CssClass="Popup" style = "display:none">  
             <iframe style=" width: 350px; height: 300px;" id="irm1" src="ReportViolation.aspx" runat="server"></iframe>  
             <br/>  
             <asp:Button ID="closeButton" runat="server" Text="Close" CssClass="BUTTON_XWX" />  
