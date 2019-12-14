@@ -4,6 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <style>
+        /* unvisited link */
+        a:link {
+        color: white;
+        }
+        /* visited link */
+        a:visited {
+        color: navajowhite;
+        }
+
+        /* mouse over link */
+        a:hover {
+        color: blueviolet;
+        }
+    </style>
     <title>Home</title>
     <link href="CSS/LoginStyle.css" rel="stylesheet"/>
     <link href="CSS/DataGrid.css" rel="stylesheet"/>
@@ -63,7 +78,7 @@
 				<AlternatingItemStyle CssClass="GridAltItem"></AlternatingItemStyle></asp:DataGrid>
             </div>
             <ul>
-	                <li><a href="InfoSite/RamPark_home.aspx">RamPark Info.</a></li>
+	                <li><a href="InfoSite/RamPark_home.aspx">RamPark Information</a></li>
             </ul>
 
 
